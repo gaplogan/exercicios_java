@@ -1,0 +1,4 @@
+Manifest-Version: ${Versão do Programa}
+Created-By: ${Criador da Aplicação}
+Main-Class: ${A Classe Inicial da Aplicação (Sem extenção .class)}
+X-COMMENT: ${Comentários} Obs.: Tem que ter a linha 5 em branco como abaixo, senão pode falhar.
