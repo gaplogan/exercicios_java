@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class Forca extends JFrame{
 	
-	private JLabel lblTitulo, lblImg, lblResultado;
+	private JLabel lblTitulo, lblImg, lblResultado, lblLetrasDigitadas;
 	private JButton btnEnviar;
 	Icon imagem[];
 	
@@ -34,6 +34,11 @@ public class Forca extends JFrame{
 		lblResultado.setBounds(350,150,500,50);
 		lblResultado.setFont(new Font("Arial", Font.BOLD, 40));
 		add(lblResultado);
+
+		lblLetrasDigitadas = new JLabel("Letras Digitadas: ");
+		lblLetrasDigitadas.setBounds(10,600,800,50);
+		lblLetrasDigitadas.setFont(new Font("Arial", Font.BOLD, 24));
+		add(lblLetrasDigitadas);
 		
 		btnEnviar = new JButton("Iniciar Jogo");
 		btnEnviar.setBounds(550,260,250,50);
@@ -61,7 +66,7 @@ public class Forca extends JFrame{
 	}
 	
 	private void startGame(){
-		String[] palavras = {"carro", "cachorro", "borboleta", "cavalo", "helicoptero", "moto", "jupter", "saturno", "brasil"};
+	String[] palavras = {"carro", "cachorro", "borboleta", "cavalo", "helicoptero", "moto", "jupter", "saturno", "brasil", "dinossauro", "girafa", "marte", "barco", "mercurio"};
 		
 		lblImg.setIcon(imagem[0]);
 		
@@ -77,48 +82,54 @@ public class Forca extends JFrame{
 		int palavraString = palavras[index].length();
         int tentativas = 7, indexImagem = 1;
 		
+		String letrasDigitadas = "";
+
 		while (palavraString > 0 && tentativas > 0) {
 			
 			lblResultado.setText("");
+			lblLetrasDigitadas.setText("Letras Digitadas: " + letrasDigitadas);
 			
             for (int i = 0; i < palavraSelecionada.length(); i++) {
                 lblResultado.setText(lblResultado.getText() + " " + traco[i] + " ");
             }
 
 			String mensagem = "";
-            mensagem += "Você tem " + tentativas + " chances de adivinhar\n";
+            mensagem += "VocÃª tem " + tentativas + " chances de adivinhar\n";
             mensagem += "A palavra tem " + palavraString + " letras restantes\n";
             mensagem += "Digite uma letra: \n";
 			            
 			String letra = JOptionPane.showInputDialog(null, mensagem);
-						
-            char letras = letra.charAt(0);
-            boolean iscorrect = false;
-            for (int i = 0; i < traco.length; i++) {
+			
+			if(letra.length() > 0){
+				char letras = letra.charAt(0);
+				boolean iscorrect = false;
+				
+				if(letrasDigitadas.contains(letra)){
+					JOptionPane.showMessageDialog(null, "VocÃª jÃ¡ digitou a letra " + letras);
+				}else{
+					letrasDigitadas += letras + " ";
+					for (int i = 0; i < traco.length; i++) {
 
-                if (palavras[index].charAt(i) == letras) {
-                    traco[i] = letras;
-                    palavraString--;
-                    iscorrect = true;
-                }
-            }
+						if (palavras[index].charAt(i) == letras) {
+							traco[i] = letras;
+							palavraString--;
+							iscorrect = true;
+						}
+					}
 
-            if (!iscorrect) {
-                tentativas--;
-				lblImg.setIcon(imagem[indexImagem++]);
-            }
+					if (!iscorrect) {
+						tentativas--;
+						lblImg.setIcon(imagem[indexImagem++]);
+					}
+				}
+			}                        
         }
 		
 		if (palavraString == 0) {
 			lblResultado.setText(palavraSelecionada);
-			JOptionPane.showMessageDialog(null,"PARABENS!Você ACERTOU! \n\nA palavra era:  " + palavraSelecionada);
+			JOptionPane.showMessageDialog(null,"PARABENS!VocÃª ACERTOU! \n\nA palavra era:  " + palavraSelecionada);
         } else {
-			JOptionPane.showMessageDialog(null,"Infelizmente \nVocê Perdeu \n\nA palavra era:  " + palavraSelecionada);
+			JOptionPane.showMessageDialog(null,"Infelizmente \nVocÃª Perdeu \n\nA palavra era:  " + palavraSelecionada);
         }
 	}
 }
-
-
-
-
-
