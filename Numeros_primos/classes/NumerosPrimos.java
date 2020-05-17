@@ -1,4 +1,4 @@
-package Numeros_primos.classes;
+package classes;
 
 public class NumerosPrimos{
 	

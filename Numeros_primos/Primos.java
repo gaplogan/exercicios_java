@@ -1,9 +1,7 @@
-package Numeros_primos;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import Numeros_primos.classes.*;
+import classes.*;
 
 public class Primos extends JFrame{
 	

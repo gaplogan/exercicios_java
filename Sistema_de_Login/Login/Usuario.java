@@ -1,4 +1,4 @@
-package Sistema_de_Login.Login;
+package Login;
 
 public class Usuario {
     public String Nome;
