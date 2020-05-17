@@ -77,4 +77,3 @@ public class Primos extends JFrame{
 		form.setTitle("N�meros Primos");
 	}
 }
-
