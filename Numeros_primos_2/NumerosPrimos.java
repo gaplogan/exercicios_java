@@ -1,3 +1,5 @@
+package Numeros_primos_2;
+
 import java.util.Scanner;
 
 public class NumerosPrimos
@@ -9,12 +11,12 @@ public class NumerosPrimos
 		String resultado = "";
 		int num, quantDivisores = 0;
 		
-		System.out.println("Digite um número para verificar se é primo");
-		System.out.print("Número: ");
+		System.out.println("Digite um nï¿½mero para verificar se ï¿½ primo");
+		System.out.print("Nï¿½mero: ");
 		num = entrada.nextInt();	
 
 		if(num < 2){
-			System.out.println("Número inválido.");
+			System.out.println("Nï¿½mero invï¿½lido.");
 		}
 		
 		for(int i = 1; i <= num; i++) {
@@ -24,9 +26,9 @@ public class NumerosPrimos
 		}
 
 		if (quantDivisores == 2) {
-			System.out.println("O número " + num + " é primo.");
+			System.out.println("O nï¿½mero " + num + " ï¿½ primo.");
 		} else {
-			System.out.println("O número " + num + " não é primo.");
+			System.out.println("O nï¿½mero " + num + " nï¿½o ï¿½ primo.");
 		}
 	}
 }

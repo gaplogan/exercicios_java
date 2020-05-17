@@ -1,3 +1,5 @@
+package Sequencia_Fibonacci;
+
 import java.util.Scanner;
 
 public class Fibonacci{
@@ -6,10 +8,10 @@ public class Fibonacci{
 		
 		int numeros[] = new int[3];
 		
-		System.out.print("Digite um número: ");
+		System.out.print("Digite um nï¿½mero: ");
 		int val = new Scanner(System.in).nextInt();
 		
-		System.out.println("Sequência de Fibonacci " + val + " valores");
+		System.out.println("Sequï¿½ncia de Fibonacci " + val + " valores");
 		
 		numeros[0] = 0;
 		numeros[1] = 1;

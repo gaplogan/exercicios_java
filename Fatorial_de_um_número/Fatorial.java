@@ -1,3 +1,5 @@
+package Fatorial_de_um_número;
+
 import java.util.Scanner;
 
 public class Fatorial{

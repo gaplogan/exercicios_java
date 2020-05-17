@@ -1,7 +1,9 @@
+package Numeros_primos;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import classes.*;
+import Numeros_primos.classes.*;
 
 public class Primos extends JFrame{
 	
@@ -17,7 +19,7 @@ public class Primos extends JFrame{
 		
 		Font letra = new Font("Arial", Font.BOLD, 20);
 		
-		titulo = new JLabel("Digite um número para Verificar");
+		titulo = new JLabel("Digite um nï¿½mero para Verificar");
 		titulo.setBounds(10,10,450,50);
 		titulo.setFont(letra);
 		add(titulo);
@@ -45,9 +47,9 @@ public class Primos extends JFrame{
 				public void actionPerformed(ActionEvent e){					
 					int num = Integer.parseInt(txtNumero.getText());
 					if(primo.verificarPrimo(num)){
-						JOptionPane.showMessageDialog(null, "O número " + num + " é primo");
+						JOptionPane.showMessageDialog(null, "O nï¿½mero " + num + " ï¿½ primo");
 					}else{
-						JOptionPane.showMessageDialog(null, "O número " + num + " não é primo");
+						JOptionPane.showMessageDialog(null, "O nï¿½mero " + num + " nï¿½o ï¿½ primo");
 					}
 				}
 			}
@@ -74,6 +76,6 @@ public class Primos extends JFrame{
 		form.setLocationRelativeTo(null);
 		form.setVisible(true);
 		form.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		form.setTitle("Números Primos");
+		form.setTitle("Nï¿½meros Primos");
 	}
 }

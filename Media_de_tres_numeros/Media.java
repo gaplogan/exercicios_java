@@ -1,3 +1,5 @@
+package Media_de_tres_numeros;
+
 import java.util.Scanner;
 
 public class Media{
@@ -19,7 +21,7 @@ public class Media{
 		
 		media = (num1 + num2 + num3) / 3;
 		
-		System.out.println("A média dos valores é: " + media);
+		System.out.println("A mï¿½dia dos valores ï¿½: " + media);
 	}
 }
 

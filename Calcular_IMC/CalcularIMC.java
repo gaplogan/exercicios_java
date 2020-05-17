@@ -1,3 +1,5 @@
+package Calcular_IMC;
+
 import java.util.Scanner;
 
 public class CalcularIMC {

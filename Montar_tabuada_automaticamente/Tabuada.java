@@ -1,3 +1,5 @@
+package Montar_tabuada_automaticamente;
+
 import java.util.Scanner;
 
 public class Tabuada{

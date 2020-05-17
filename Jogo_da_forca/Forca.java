@@ -1,3 +1,5 @@
+package Jogo_da_forca;
+
 import javax.swing.*;
 import java.util.*;
 import java.awt.*;
@@ -5,6 +7,7 @@ import java.awt.event.*;
 
 public class Forca extends JFrame{
 	
+	private static final long serialVersionUID = 1L;
 	private JLabel lblTitulo, lblImg, lblResultado, lblLetrasDigitadas;
 	private JButton btnEnviar;
 	Icon imagem[];
