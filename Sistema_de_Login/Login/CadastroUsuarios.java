@@ -1,4 +1,4 @@
-package Sistema_de_Login.Login;
+package Login;
 
 public class CadastroUsuarios {
     private static Usuario[] usuarios = {

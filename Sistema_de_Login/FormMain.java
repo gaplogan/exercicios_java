@@ -1,19 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import Sistema_de_Login.Login.*;
+import Login.*;
 
 public class FormMain extends JFrame{
-
-    private static final long serialVersionUID = 1L;
     private JLabel titulo;
 
     public FormMain(){        
-        Font letra = new Font("Arial", Font.BOLD, 20);
+        Font letra = new Font("Arial", Font.BOLD, 36);
 
         titulo = new JLabel("Bem vindo!");
 		titulo.setBounds(10,10,450,50);
-		titulo.setFont(letra);
+        titulo.setFont(letra);
 		add(titulo);
     }
 
